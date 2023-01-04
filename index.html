@@ -13,6 +13,12 @@
     <coin-detail 
       v-bind:coin="btc"
       v-on:change-color="updateColor">
+      <template v-slot:texto>
+        <p>Lorem ipsum dolor sit amet</p>
+      </template>
+      <template v-slot:linko>
+        <a href="#">Enlace!</a>
+      </template>
     </coin-detail>
   </div>
 

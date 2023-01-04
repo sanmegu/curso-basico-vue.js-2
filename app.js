@@ -9,7 +9,7 @@ Vue.component('CoinDetail', {
   methods: {
     toggleShowPrices() {
       this.showPrices = !this.showPrices;
-      this.$emit('change-color', this.showPrices ? 'FF96C8' : 'ffffff');
+      this.$emit('change-color', this.showPrices ? 'FF96C8' : '3D3D3D');
     }
   },
 
@@ -45,6 +45,9 @@ Vue.component('CoinDetail', {
 
     <input type="number" v-model="value">
     <span>{{ convertedValue }}</span>
+
+    <slot name="texto"></slot>
+    <slot name="link"></slot>
 
     <ul v-show="showPrices">
         <li 
